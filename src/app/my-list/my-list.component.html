@@ -1,4 +1,12 @@
-<ul *ngFor="let a of arr">
-    <li>{{ a }}</li>
-</ul>
-<button (click)="sendNumber()">My Button</button>
+<div class="listWrapper">
+    <ul class="list">
+        <li class="itemWrapper" *ngFor="let a of arr">
+            {{ a }}
+            <button class="buttonDelete" (click)="delete(a)">X</button>
+        </li>
+    </ul>
+    <div class="buttonWrapper">
+        <button class="button" (click)="sendNumber()">My Button</button>
+        <button class="button" (click)="add()">Add item</button>
+    </div>
+</div>

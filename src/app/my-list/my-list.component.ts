@@ -7,7 +7,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class MyListComponent implements OnInit {
   arr = ["lista1", "lista2", "lista3"];
+  counter = this.arr.length;
+
   @Output() public sendData: EventEmitter<number> = new EventEmitter();
+
 
   constructor() { }
 
@@ -16,6 +19,15 @@ export class MyListComponent implements OnInit {
 
   public sendNumber() {
     this.sendData.emit(this.arr.length);
+  }
+
+  add(): void {
+    this.counter++;
+    this.arr.push("lista" + this.counter.toString());
+  }
+
+  delete(element: string): void {
+    this.arr = this.arr.filter((e) => e !== element);
   }
 
 }

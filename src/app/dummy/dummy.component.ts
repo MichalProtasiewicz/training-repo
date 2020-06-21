@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DummyComponent implements OnInit {
   public dummyData: number;
+  public dummyString: string;
 
   constructor() { }
 
@@ -15,6 +16,10 @@ export class DummyComponent implements OnInit {
 
   showData(data: number) {
     this.dummyData = data;
+  }
+
+  showString(data: string) {
+    this.dummyString = data;
   }
 
 }

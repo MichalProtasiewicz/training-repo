@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { DummyComponent } from './dummy/dummy.component';
 import { MyListComponent } from './my-list/my-list.component';
 import { SomeComponent } from './some/some.component';
+import { InputComponent } from './input/input.component';
+import { InputReceiverComponent } from './input-receiver/input-receiver.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DummyComponent,
     MyListComponent,
-    SomeComponent
+    SomeComponent,
+    InputComponent,
+    InputReceiverComponent,
   ],
   imports: [
     BrowserModule
